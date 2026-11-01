@@ -1,0 +1,12 @@
+# Dépendances et builds
+node_modules/
+*.tsbuildinfo
+
+# Variables d'environnement (secrets, URL locales)
+.env
+.env*.local
+
+# Fichiers locaux
+.claude/
+expo-qr.png
+.DS_Store

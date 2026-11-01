@@ -1,0 +1,21 @@
+{
+  "description": "Format unique des publications (vidéo ou image) récupérées sur les 4 sites",
+  "sites": ["tijanizawiya.net", "almadinauniversity.com", "icfaonline.com", "seneinfo.net"],
+  "champs": {
+    "id": "Identifiant unique",
+    "site": "Nom du site",
+    "type": "video | image",
+    "titre": "90 caractères maximum",
+    "affiche": "Image 16:9, 1280 x 720 px minimum",
+    "media_url": "Lien de la vidéo (type video)",
+    "duree": "Durée, ex. 12:04 (type video)",
+    "date": "Date ISO 8601",
+    "url": "Lien de la page sur le site"
+  },
+  "exemple": {
+    "id": "tz-2026-0142", "site": "tijanizawiya.net", "type": "video",
+    "titre": "Titre de la vidéo", "affiche": "https://exemple/affiche.jpg",
+    "media_url": "https://exemple/video.mp4", "duree": "12:04",
+    "date": "2026-10-13T09:12:00Z", "url": "https://tijanizawiya.net/exemple"
+  }
+}

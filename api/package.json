@@ -1,0 +1,20 @@
+{
+  "name": "sakho-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "migrate": "tsx --env-file=.env scripts/migrate.ts",
+    "sync": "tsx --env-file=.env scripts/sync.ts",
+    "dev": "tsx --env-file=.env scripts/dev.ts"
+  },
+  "dependencies": {
+    "@vercel/functions": "^3.10.5",
+    "postgres": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
