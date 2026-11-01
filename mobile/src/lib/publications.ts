@@ -86,7 +86,7 @@ function lire(rubriquesCle: string | undefined) {
 }
 
 const NOMS_SITES: Record<string, string> = {
-  'tijanizawiya.net': 'Tijanizawiya.net',
+  'tijanizawiya.com': 'Tijanizawiya.com',
   'almadinauniversity.com': 'Almadinauniversity.com',
   'icfaonline.com': 'Icfaonline.com',
   'almadinatravel.net': 'Almadinatravel.net',

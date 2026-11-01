@@ -12,9 +12,9 @@ export type SiteInfo = {
 // Les 5 sites de SAKHO GROUP regroupés dans l'application.
 export const SITES: SiteInfo[] = [
   {
-    slug: 'tijanizawiya.net',
-    nom: 'Tijanizawiya.net',
-    url: 'https://tijanizawiya.net',
+    slug: 'tijanizawiya.com',
+    nom: 'Tijanizawiya.com',
+    url: 'https://tijanizawiya.com',
     description: 'Zawiya Tijaniya',
     icon: 'moon-outline',
   },

@@ -4,7 +4,7 @@ export type SiteConfig = {
   slug: string;
   nom: string;
   url: string;
-  adaptateur: 'wordpress' | 'moodle' | 'auto';
+  adaptateur: 'wordpress' | 'moodle' | 'godaddy' | 'auto';
   rubrique: Rubrique;
   /** Ignore les articles plus anciens (contenus de démo du thème WordPress). */
   depuis?: string;
@@ -13,10 +13,10 @@ export type SiteConfig = {
 // Les 5 sites de SAKHO GROUP (exploration du 01/11/2026).
 export const SITES: SiteConfig[] = [
   {
-    slug: 'tijanizawiya.net',
-    nom: 'Tijanizawiya.net',
-    url: 'https://tijanizawiya.net',
-    adaptateur: 'auto', // le domaine ne résout pas (aucun DNS) au 01/11/2026
+    slug: 'tijanizawiya.com',
+    nom: 'Tijanizawiya.com',
+    url: 'https://tijanizawiya.com',
+    adaptateur: 'godaddy', // page unique sans blog au 01/11/2026
     rubrique: 'actualite',
   },
   {

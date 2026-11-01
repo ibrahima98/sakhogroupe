@@ -52,4 +52,4 @@ npx expo start
 | almadinatravel.net | WordPress (permaliens désactivés → `?rest_route=`) | Offres Omra/Hajj (rubrique voyage) |
 | almadinauniversity.com | Moodle | Cours de l'accueil public, avec image, et vidéo de présentation |
 | icfaonline.com | Moodle | Cours de l'accueil public (sans image) |
-| tijanizawiya.net | ? | Domaine sans DNS au 01/11/2026 : rien à récupérer |
+| tijanizawiya.com | GoDaddy Website Builder | Rien pour l'instant (page unique sans blog) ; le blog GoDaddy (`/f.rss`) sera lu automatiquement s'il est ajouté |

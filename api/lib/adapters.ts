@@ -33,7 +33,7 @@ const USER_AGENT = 'Mozilla/5.0 (compatible; SakhoGroupBot/1.0)';
 
 // Préfixe des identifiants : « tz-97610 », « sn-97610 »…
 const PREFIXES: Record<string, string> = {
-  'tijanizawiya.net': 'tz',
+  'tijanizawiya.com': 'tz',
   'almadinauniversity.com': 'amu',
   'icfaonline.com': 'icfa',
   'almadinatravel.net': 'amt',
@@ -330,6 +330,17 @@ export async function adaptateurRss(site: Site, chemin = '/feed'): Promise<Publi
 }
 
 // ---------------------------------------------------------------------------
+// GoDaddy Website Builder (tijanizawiya.com) : seul le blog, s'il existe, publie
+// un flux RSS sur /f.rss. Sans blog, l'adresse renvoie la page d'accueil : on
+// renvoie alors zéro publication, sans erreur.
+// ---------------------------------------------------------------------------
+
+export async function adaptateurGodaddy(site: Site): Promise<Publication[]> {
+  const xml = await (await telecharger(`${site.url}/f.rss`)).text();
+  return /<rss[\s>]/i.test(xml) ? lireRss(xml, site) : [];
+}
+
+// ---------------------------------------------------------------------------
 // Auto : WordPress, puis les chemins RSS courants
 // ---------------------------------------------------------------------------
 
@@ -354,6 +365,7 @@ export async function adaptateurAuto(site: Site): Promise<Publication[]> {
 const ADAPTATEURS: Record<string, (site: Site) => Promise<Publication[]>> = {
   wordpress: adaptateurWordpress,
   moodle: adaptateurMoodle,
+  godaddy: adaptateurGodaddy,
   rss: (site) => adaptateurRss(site),
   auto: adaptateurAuto,
 };
